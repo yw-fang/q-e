@@ -1,5 +1,12 @@
 ![q-e-logo](logo.jpg)
 
+# My revisions based on QE-v7.1
+
+- To get rid of the raised error of comparing DOS(Ef) consistentcy in lambda.x calculations, I commented out several lines, see this commit https://github.com/yw-fang/q-e/commit/c0d87be6e383667258f4ee1a745b4f2a5c83d2b8 
+
+
+# The contents below is same to the official version.
+
 This is the distribution of the Quantum ESPRESSO suite of codes (ESPRESSO:
 opEn-Source Package for Research in Electronic Structure, Simulation, and
 Optimization)
