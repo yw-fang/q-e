@@ -109,9 +109,13 @@ program elph
         if (ik.eq.1) then
            dosef(ng)=dosef1
            ef(ng)=ef1
-        else
-           if (dosef(ng).ne.dosef1.or.ef(ng).ne.ef1) &
-              call errore('lambda','inconsistent DOS(Ef) read',ik)
+           ! I commented out the following three lines because in some cases 
+           ! epc calculations with q parallel in different machines, the DOS may be different
+           ! To get rid of this error, I commented out. However, in most cases, use the official
+           ! without commenting out. Yuewen Fang September 16, 2022
+!        else
+!           if (dosef(ng).ne.dosef1.or.ef(ng).ne.ef1) &
+!              call errore('lambda','inconsistent DOS(Ef) read',ik)
         end if
         do mu=1,nmodes
            read (iuelph,9010) nu, lambdaq(mu,ng), gammaq
